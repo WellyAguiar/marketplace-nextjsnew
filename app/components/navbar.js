@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import AnimatedLink from './AnimatedLink';
 
-const Navbar = () => {
+const navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
   const router = useRouter();
@@ -154,4 +154,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default navbar;
