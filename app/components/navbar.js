@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
-import AnimatedLink from './AnimatedLink';
+import { useRouter } from "next/navigation";
+import AnimatedLink from "./AnimatedLink";
 
-const navbar = () => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
   const router = useRouter();
@@ -49,7 +49,7 @@ const navbar = () => {
     { text: "Homens", href: "/men", hoveredText: "Men" },
     { text: "Mulheres", href: "/women", hoveredText: "Women" },
     { text: "Contato", href: "/contact", hoveredText: "Contact" },
-    { text: "Entrar", href: "/auth", hoveredText: "Login", isAuthLink: true }
+    { text: "Entrar", href: "/auth", hoveredText: "Login", isAuthLink: true },
   ];
 
   return (
@@ -59,7 +59,7 @@ const navbar = () => {
           Tendência Modas
         </Link>
         <nav className="hidden md:flex space-x-4 items-center">
-          {links.slice(0, 4).map(link => (
+          {links.slice(0, 4).map((link) => (
             <AnimatedLink
               key={link.href}
               text={link.text}
@@ -138,7 +138,7 @@ const navbar = () => {
               </svg>
             </button>
             <nav className="flex flex-col space-y-4">
-              {links.slice(0, 4).map(link => (
+              {links.slice(0, 4).map((link) => (
                 <AnimatedLink
                   key={link.href}
                   text={link.text}
@@ -154,4 +154,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
